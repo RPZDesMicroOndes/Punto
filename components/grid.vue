@@ -1,7 +1,7 @@
 <template>
     <table class="grid">
-        <tr v-for="row_id in 11">
-            <Cell v-for="column_id in 11">{{row_id - 1}}; {{column_id - 1}}</Cell>
+        <tr v-for="row_id in 11" :key="row_id">
+            <Cell v-for="column_id in 11" :key="column_id" :row_id="row_id" :column_id="column_id"> </Cell>
         </tr>
     </table>
 </template>
@@ -17,7 +17,13 @@
     .grid {
         height: fit-content;
         width: fit-content;
+
         border: 2px solid;
         border-color: var(--border_color);
+        border-radius: 5px;
     }
 </style>
+
+<script>
+    
+</script>

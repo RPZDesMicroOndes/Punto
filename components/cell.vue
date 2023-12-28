@@ -1,6 +1,5 @@
 <template>
-    <td class="cell"> 
-        <slot> </slot>
+    <td class="cell" @click="display_coords"> 
     </td>
 </template>
 <style>
@@ -28,4 +27,31 @@
         border-radius: 5px;
         border-color: var(--hover_color);
     }
+
 </style>
+<script>
+export default {
+    data() {
+        return {
+            RowId: null,
+            ColumnId: null,
+        };
+    },
+
+    methods: {
+        get_row_id() {
+            // Get the row ID from the props
+            const row_id = this.$attrs.row_id;
+            return row_id;
+        },
+        get_column_id() {
+            // Get the column ID from the props
+            const column_id = this.$attrs.column_id;
+            return column_id;
+        },
+        display_coords() {
+            console.log('Clicked cell coords - Row: ' + this.get_row_id() + '; Column: ' + this.get_column_id() + '.')
+        }
+    }
+}
+</script>

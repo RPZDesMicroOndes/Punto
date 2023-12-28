@@ -1,6 +1,7 @@
 <template>
     <h1>Punto</h1>
-    <Grid></Grid>
+    <BoardGrid></BoardGrid>
+    <UIMenu></UIMenu>
 </template>
 <script>
 

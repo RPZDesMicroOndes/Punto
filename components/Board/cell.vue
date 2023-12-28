@@ -1,5 +1,5 @@
 <template>
-    <td class="cell" @click="display_coords"> 
+    <td class="cell" @click="change_card"> 
     </td>
 </template>
 <style>
@@ -50,7 +50,29 @@ export default {
             return column_id;
         },
         display_coords() {
-            console.log('Clicked cell coords - Row: ' + this.get_row_id() + '; Column: ' + this.get_column_id() + '.')
+            console.log('Clicked cell coords - Row: ' + this.get_row_id() + '; Column: ' + this.get_column_id() + '.');
+        },
+        change_card(){
+            // Variables
+            let card = '';
+
+            this.display_coords();
+            card = this.get_card();
+            this.$el.textContent = card.color + '-' + card.dots;
+        },
+        get_card() {
+            // Variables
+            const colors = ['B', 'R', 'G', 'Y'];
+            let color = '';
+            let color_index = 0;
+
+            let dots = 0;
+            
+            color_index = Math.floor(Math.random() * colors.length);
+            color = colors[color_index];
+
+            dots = Math.ceil(Math.random() * 9);
+            return {dots: dots, color: color};
         }
     }
 }

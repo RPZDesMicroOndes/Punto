@@ -1,7 +1,7 @@
 <template>
     <table class="grid">
         <tr v-for="row_id in 11" :key="row_id">
-            <Cell v-for="column_id in 11" :key="column_id" :row_id="row_id" :column_id="column_id"> </Cell>
+            <BoardCell v-for="column_id in 11" :key="column_id" :row_id="row_id" :column_id="column_id"> </BoardCell>
         </tr>
     </table>
 </template>

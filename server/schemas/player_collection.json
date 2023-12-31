@@ -1,0 +1,19 @@
+{
+	"title":"Player",
+	"required":[
+		"id_player"
+    ],
+	"properties":{
+        "_id":{"bsonType":"objectId"},
+		"id_player":{"bsonType":"string"},
+		"player_name":{"bsonType":"string"},
+        "player_birthdate":{"bsonType":"date"},
+		"is_current":{"bsonType":"bool"},
+        "nb_won_rounds":{"bsonType":"int"},
+        "nb_won_games":{"bsonType":"int"},
+        "cards":{
+            "bsonType":"array",
+            "id_cards":{"bsonType":"string"}
+        }
+	}
+}

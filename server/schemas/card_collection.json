@@ -1,0 +1,15 @@
+{
+	"title":"Card",
+	"required":[
+		"id_card"
+    ],
+	"properties":{
+        "_id":{"bsonType":"objectId"},
+		"id_card":{"bsonType":"string"},
+		"row_pos":{"bsonType":"int"},
+        "col_pos":{"bsonType":"int"},
+        "dots":{"bsonType":"int"},
+        "color":{"bsonType":"string"},
+		"is_placed":{"bsonType":"bool"}
+	}
+}

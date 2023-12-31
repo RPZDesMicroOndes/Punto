@@ -59,7 +59,7 @@ If a player cannot play a card, if the board is full and the player is unable to
 ![1703799266605](image/README/1703799266605.png)
 *fig: Settle a tie.*
 
-If there is a draw between multiple players, the player (in the tie) having 3-4 cards line with the fewest point win the round. 
+If there is a draw between multiple players, the player (in the tie) having 3-4 cards line with the fewest point win the round.
 
 ## Application
 
@@ -74,6 +74,12 @@ Here are the NodeJS version this application uses:
 ### Features (In Progress)
 
 For now, this game can display a 11x11 board and display random 'cards' when a cell of the board is clicked.
+
+This game will work with MongoDB, using Mongoose. The collections' schemas can be find in the folder :
+
+```
+./server/schemas/
+```
 
 I'm still developping the game, so features will be added in the future.
 
@@ -97,7 +103,7 @@ I'm still developping the game, so features will be added in the future.
 
 ### Development Server
 
-    Start the development server on `http://localhost:3000`:
+    Start the development server on`http://localhost:3000`:
 
 ```bash
     # npm
